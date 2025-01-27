@@ -43,3 +43,35 @@ class Employee(Person):
     
 employee = Employee("John", 30, "Male")
 print(employee._name)
+
+## Encapsulation with getter andd setter
+class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+    # getter method for main
+    def get_name(self):
+        return self.__name
+    # setter method for name
+    def set_name(self, name):
+        self.__name = name
+    # getter method for age
+    def get_age(self):
+        return self.__age
+    # setter method for age
+    def set_age(self, age):
+        if age > 0:
+            self.__age = age
+        else:
+            print("Age should be greater than 0")
+    
+person = Person("Bhumit",22)
+
+## Access and modify private variable using getter and setter
+print(person.get_name())
+print(person.get_age())
+
+person.set_age(35)
+print(person.get_age())
+
+person.set_age(-5)

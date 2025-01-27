@@ -1,0 +1,8 @@
+import requests
+
+r = requests.get('https://api.github.com/events') 
+print(r.status_code) # status_code is 200 if the request was successful
+print(r.headers['content-type']) # prints the content type of the response
+print(r.encoding) # prints the encoding of the response
+print(r.text) # prints the response as text
+print(r.json()) # prints the response as JSON
