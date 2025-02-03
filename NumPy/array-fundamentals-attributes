@@ -1,0 +1,31 @@
+import numpy as np
+
+# Initialize a numpy array
+a = np.array([1, 2, 3, 4, 5, 6])
+print(a)
+
+# Access elements of the array
+print(a[0])
+
+a[0] = 10 # array is mutable
+print(a)
+
+# Slicing an array
+print(a[:3])
+
+b = a[3:]
+print(b)
+
+b[0] = 100
+print(a)
+
+# Higher Dimensional Arrays
+
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(a)
+
+# Array Attributes
+
+print(a.ndim) # number of dimensions
+
+print(a.shape) # shape of the array
